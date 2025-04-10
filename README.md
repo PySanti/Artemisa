@@ -7,6 +7,8 @@ Ejecutaremos los pasos formales en el proceso de preprocesamiento y entrenamient
 
 La idea del proyecto será revisar el rendimiento de *KNN* (un algoritmo que aprendimos hace poco), y *comparar los resultados de Ridge y Lasso con Regresión Lineal*.
 
+El [dataset](https://www.kaggle.com/datasets/oladayoowoeye/airbnb) a utilizar contiene informacion sobre airbnbs. La idea es construir un modelo que genere un precio competitivo dadas las caracteristicas de un airbnb.
+
 
 ## Preprocesamiento
 

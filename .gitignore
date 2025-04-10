@@ -1,5 +1,6 @@
 *.joblib
 *.csv
+data
 dep/*  
 !dep/lib/python3.12/site-packages/preprocess/  
 !dep/lib/python3.12/site-packages/preprocess/*  
