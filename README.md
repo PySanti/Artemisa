@@ -1,4 +1,8 @@
 
+# Project Title
+
+A brief description of what this project does and who it's for
+
 # Artemisa
 
 El objetivo de este proyecto será ejecutar un ejercicio de aprendizaje supervisado de regresión implementando los algoritmos: *KNN, Ridge, Lasso y Regresión Lineal*.
@@ -7,7 +11,7 @@ Ejecutaremos los pasos formales en el proceso de preprocesamiento y entrenamient
 
 La idea del proyecto será revisar el rendimiento de *KNN* (un algoritmo que aprendimos hace poco), y *comparar los resultados de Ridge y Lasso con Regresión Lineal*.
 
-El [dataset](https://www.kaggle.com/datasets/oladayoowoeye/airbnb) a utilizar contiene informacion sobre airbnbs. La idea es construir un modelo que genere un precio competitivo dadas las caracteristicas de un airbnb.
+El [dataset](https://www.kaggle.com/datasets/ebrahimhaquebhatti/pakistan-house-price-prediction) a utilizar contiene informacion acerca de casas en pakistan. La idea es crear un modelo capaz de predecir el precio de una casa dada sus características.
 
 
 ## Preprocesamiento
@@ -39,4 +43,4 @@ De nuevo, al ser un problema de regresión, no se revisará.
 
 ## Entrenamiento
 
-## Evaluación
+## Evaluación%      
