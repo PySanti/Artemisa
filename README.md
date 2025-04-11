@@ -16,13 +16,59 @@ El [dataset](https://www.kaggle.com/datasets/ebrahimhaquebhatti/pakistan-house-p
 
 ## Preprocesamiento
 
+Primeramente se eliminaron las columnas `Unnamed: 0`, `page_url`, `property_id`.
+
+Shape del dataset : `168446 x 18`
+
 ### Duplicados
+
+Se encontraron `15011` duplicados.
 
 ### Manejo de Nans
 
+Las unicas columnas que contienen valores Nan son:
+
+```
+agency  26.16%
+agent   26.16%
+```
+
+Los registros que son null en agency tambien son null en agent. Se eliminaran usando el siguiente comando:
+
+```
+df1 = df1.drop(df1.query("agency != agency and agent != agent").index)
+df1 = df1.drop(155597)
+```
+
 ### Codificación
 
+Las columnas con valores categoricos son:
+
+
+```
+property_type:  one-hot-encoding
+city:           one-hot-encoding
+province_name:  one-hot-encoding
+purpose:        one-hot-encoding
+location:       target-encoding
+agency:         target-encoding
+agent:          target-encoding
+date-added:     date-encoder
+```
+
 ### Scalers
+
+El scaling sera aplicado sobre las siguientes columnas:
+
+```
+location_id
+price
+latitude
+longitude
+baths
+bedrooms
+Total_Area
+```
 
 ### Extracción y/o selección de características
 
