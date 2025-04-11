@@ -22,7 +22,7 @@ Shape del dataset : `168446 x 18`
 
 ### Duplicados
 
-Se encontraron `15011` duplicados.
+Se encontraron `15011 (8.91%)` duplicados.
 
 ### Manejo de Nans
 
@@ -72,7 +72,11 @@ Total_Area
 
 ### Extracción y/o selección de características
 
+Solo se hara extraccion de características.
+
 ### Outliers
+
+No se estudiara
 
 ### Campana de Gauss
 
