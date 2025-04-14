@@ -7,7 +7,7 @@ A brief description of what this project does and who it's for
 
 El objetivo de este proyecto será ejecutar un ejercicio de aprendizaje supervisado de regresión implementando los algoritmos: *KNN, Ridge, Lasso y Regresión Lineal*.
 
-Ejecutaremos los pasos formales en el proceso de preprocesamiento y entrenamiento a través de la *matriz de estudio* vista en otros ejercicios.
+Ejecutaremos los pasos formales en el proceso de preprocesamiento.
 
 La idea del proyecto será revisar el rendimiento de *KNN* (un algoritmo que aprendimos hace poco), y *comparar los resultados de Ridge y Lasso con Regresión Lineal*.
 
@@ -93,4 +93,78 @@ De nuevo, al ser un problema de regresión, no se revisará.
 
 ## Entrenamiento
 
-## Evaluación%      
+Se realizo un proceso iterativo de :
+
+1- Obtencion de hiperparametros optimos para cada algoritmo
+
+2- Evaluacion del algoritmo para esos hiperparametros y esa version de preprocesamiento.
+
+Se evaluaron dos versiones de preprocesamiento : con y sin seleccion de características.
+
+## Evaluación
+
+
+### Variante con seleccion de características
+
+```
+Rendimiento de knn para train : 458143.832
+Rendimiento de knn para test : 7771098.072
+r2 de knn para train : 0.996
+r2 de knn para test : 0.471
+{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}
+__________________________
+Rendimiento de Ridge para train : 14303123.578
+Rendimiento de Ridge para test : 14555746.583
+r2 de Ridge para train : 0.392
+r2 de Ridge para test : 0.332
+{'alpha': 1e-06, 'fit_intercept': True, 'solver': 'svd', 'tol': 1e-07}
+__________________________
+/home/santiago/Escritorio/Aprendizaje ML/practicas/session8/Artemisa/dep/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.113e+19, tolerance: 1.354e+13
+  model = cd_fast.enet_coordinate_descent(
+Rendimiento de Lasso para train : 14303123.577
+Rendimiento de Lasso para test : 14555746.583
+r2 de Lasso para train : 0.392
+r2 de Lasso para test : 0.332
+{'alpha': 1e-06, 'fit_intercept': True, 'tol': 1e-07}
+__________________________
+Rendimiento de Regresion lineal para train : 14303123.578
+Rendimiento de Regresion lineal para test : 14555746.583
+r2 de Regresion lineal para train : 0.392
+r2 de Regresion lineal para test : 0.332
+{'copy_X': True, 'fit_intercept': True}
+__________________________
+
+```
+
+### Variante sin seleccion de características
+
+```
+Rendimiento de knn para train : 9430158.551
+Rendimiento de knn para test : 11664809.731
+r2 de knn para train : 0.588
+r2 de knn para test : 0.352
+{'metric': 'manhattan', 'n_neighbors': 7, 'weights': 'uniform'}
+__________________________
+/home/santiago/Escritorio/Aprendizaje ML/practicas/session8/Artemisa/dep/lib/python3.12/site-packages/sklearn/linear_model/_ridge.py:215: LinAlgWarning: Ill-conditioned matrix (rcond=2.45444e-26): result may not be accurate.
+  return linalg.solve(A, Xy, assume_a="pos", overwrite_a=True).T
+Rendimiento de Ridge para train : 14103587.177
+Rendimiento de Ridge para test : 14326474.730
+r2 de Ridge para train : 0.416
+r2 de Ridge para test : 0.360
+{'alpha': 0.01, 'fit_intercept': False, 'solver': 'cholesky', 'tol': 1e-07}
+__________________________
+/home/santiago/Escritorio/Aprendizaje ML/practicas/session8/Artemisa/dep/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.954e+19, tolerance: 1.354e+13
+  model = cd_fast.enet_coordinate_descent(
+Rendimiento de Lasso para train : 14059392.304
+Rendimiento de Lasso para test : 14288725.762
+r2 de Lasso para train : 0.416
+r2 de Lasso para test : 0.359
+{'alpha': 1e-06, 'fit_intercept': True, 'tol': 1e-07}
+__________________________
+Rendimiento de Regresion lineal para train : 14022922.258
+Rendimiento de Regresion lineal para test : 14260723.355
+r2 de Regresion lineal para train : 0.414
+r2 de Regresion lineal para test : 0.357
+{'copy_X': True, 'fit_intercept': False}
+__________________________
+```
