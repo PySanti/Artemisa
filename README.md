@@ -1,8 +1,4 @@
 
-# Project Title
-
-A brief description of what this project does and who it's for
-
 # Artemisa
 
 El objetivo de este proyecto será ejecutar un ejercicio de aprendizaje supervisado de regresión implementando los algoritmos: *KNN, Ridge, Lasso y Regresión Lineal*.
